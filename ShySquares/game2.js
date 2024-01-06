@@ -37,7 +37,7 @@ class A extends Phaser.Scene {
         });
         
         //couldn't figure out how to give pointer physics, so I made a sprite/body to follow mouse
-        this.testFollow = this.add.ellipse(600, 600, 50, 50, 0xffffff, 0.23);
+        this.testFollow = this.add.circle(600, 600, 25, 0xffffff, 0.23);
         this.physics.add.existing(this.testFollow, false);
         
         //physics manager for sprite/square interaction
