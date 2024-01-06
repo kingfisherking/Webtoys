@@ -38,7 +38,9 @@ class A extends Phaser.Scene {
         
         //couldn't figure out how to give pointer physics, so I made a sprite/body to follow mouse
         this.testFollow = this.add.circle(600, 600, 25, 0xffffff, 0.23);
-        this.physics.add.existing(this.testFollow, false);
+        this.physics.add.existing(this.testFollow, false);                
+        this.testFollow.body.setCircle(25);
+
         
         //physics manager for sprite/square interaction
         this.physics.add.collider(this.testFollow, this.squares);
